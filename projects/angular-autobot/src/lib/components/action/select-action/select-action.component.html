@@ -1,0 +1,16 @@
+<!-- <form class="botui-actions-select {{action.cssClass}}" (ngSubmit)="handle_action_select()">
+  <i *ngIf="action.select.icon" class="botui-icon botui-action-select-icon fa {{'fa-' + action.select.icon}}"></i>
+   <v-select *ngIf="action.select.searchselect && !action.select.multipleselect"  v-model="action.select.value" :value="action.select.value" :placeholder="action.select.placeholder" class="botui-actions-text-searchselect" :label="action.select.label" :options="action.select.options"></v-select>
+    <v-select v-else-if="action.select.searchselect && action.select.multipleselect" multiple  v-model="action.select.value" :value="action.select.value" :placeholder="action.select.placeholder" class="botui-actions-text-searchselect" :label="action.select.label" :options="action.select.options"></v-select>
+  <select [(ngModel)]="action.select.value" name="select-action-input" class="botui-actions-text-select {{action.select.cssClass}}"
+    [size]="action.select.size" required libAutobotFocus>
+    <option *ngFor="let option of action.select.options" [ngClass]="action.select.optionClass" [value]="option.value" [disabled]="(option.value == '')?true:false"
+      [selected]="(action.select.value == option.value) ? 'selected' : ''">
+      {{ option.text }}
+    </option>
+  </select>
+  <button type="submit" [ngClass]="{'botui-actions-buttons-button': !!action.select.button, 'botui-actions-select-submit': !action.select.button}">
+    <i *ngIf="action.select.button && action.select.button.icon" class="botui-icon botui-action-button-icon fa {{'fa-' + action.select.button.icon}}"></i>
+    <span>{{(action.select.button && action.select.button.label) || 'Ok'}}</span>
+  </button>
+</form> -->

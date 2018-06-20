@@ -1,0 +1,10 @@
+<div class="botui botui-container">
+
+  <!-- {{ isFrozen$ | async | json}} {{ latestMessage$ | async | json}} -->
+  <div class="botui-messages-container">
+    <autobot-message *ngFor="let msg of messages$ | async" [msg]="msg"></autobot-message>
+  </div>
+  <div class="botui-actions-container">
+    <lib-action *ngIf="(action$ | async) && (action$ | async).autobotOpts.show" [action]="action$" [resolver]="getCurrentActionResolver()"></lib-action>
+  </div>
+</div>

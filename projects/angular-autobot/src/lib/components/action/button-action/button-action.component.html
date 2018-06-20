@@ -1,0 +1,7 @@
+<div class="botui-actions-buttons">
+  <button type="button" *ngFor="let item of action.actionData.items" class="botui-actions-buttons-button {{item.cssClass}}"
+    (click)="itemClicked(item)" autofocus>
+    <i *ngIf="item.icon" class="botui-icon botui-action-button-icon fa {{'fa-' + item.icon}}"></i>
+    {{item.text}}
+  </button>
+</div>

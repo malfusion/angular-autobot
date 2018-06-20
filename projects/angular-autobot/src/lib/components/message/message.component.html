@@ -1,0 +1,37 @@
+<!-- <div class="botui-message {{msg.cssClass}}" libAutobotScroll>
+  <div *ngIf="msg.loading" class="botui-message-content loading" [class.human]="msg.human" [@slideFadeAnimation]>
+    <i class="dot"></i>
+    <i class="dot"></i>
+    <i class="dot"></i>
+  </div>
+  <ng-container *ngIf="!msg.loading">
+    <div *ngIf="msg.visible" class="botui-message-content {{msg.type}}" [class.human]="msg.human" [@slideFadeAnimation]>
+      <ng-container [ngSwitch]="msg.type">
+        <lib-text-message *ngSwitchCase="'text'" [msg]="msg"></lib-text-message>
+        <lib-embed-message *ngSwitchCase="'embed'" [msg]="msg"></lib-embed-message>
+        <span *ngSwitchDefault>Unknown Message Type</span>
+      </ng-container>
+
+    </div>
+  </ng-container>
+</div> -->
+
+
+<div class="botui-message" libAutobotScroll>
+  <div class="botui-message-content {{msg.type}}" [class.human]="msg.human" [@slideFadeAnimation]>
+    <ng-container #container>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #messageLoading>
+  <div class="botui-message-content loading" [class.human]="msg.human" [@slideFadeAnimation]>
+    <i class="dot"></i>
+    <i class="dot"></i>
+    <i class="dot"></i>
+  </div>
+</ng-template>
+
+<ng-template #unknownMessage>
+  <span>Unknown Message Type</span>
+</ng-template>

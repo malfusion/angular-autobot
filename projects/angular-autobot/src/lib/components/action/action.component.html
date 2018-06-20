@@ -1,0 +1,9 @@
+<div [@slideFadeAnimation] libAutobotScroll>
+  <ng-container [ngSwitch]="(action | async).type">
+    <lib-input-action *ngSwitchCase="'text'" [action]="(action | async)" [resolver]="resolver"></lib-input-action>
+    <!-- <lib-select-action *ngSwitchCase="'select'" [action]="(action | async)" [resolver]="resolver"></lib-select-action> -->
+    <lib-button-action *ngSwitchCase="'button'" [action]="(action | async)" [resolver]="resolver"></lib-button-action>
+    <!-- <lib-input-button-action *ngSwitchCase="'buttontext'" [action]="(action | async)" [resolver]="resolver"></lib-input-button-action> -->
+    <span *ngSwitchDefault>Unknown Message Type</span>
+  </ng-container>
+</div>
